@@ -1,10 +1,27 @@
-var app = angular.module('foodApp', [])
+var app = angular.module('foodApp', ['ui.router'])
 
-.config(function($httpProvider) {
-	// $httpProvider.interceptors.push('httpRequestInterceptor')
-	// $httpProvider.defaults.headers.commmon = {'oauth_consumer_key': 'kuB97kQcaZo9LqlDZzCovw', 
- //            				  'oauth_token': '49U_iR9p83aMe3LYjmA8JXhwqBv3TcyU', 
- //            				  'oauth_signature_method': 'hmac-sha1', 
- //            				  'oauth_signature': 'ncwV6yVh-GXsUttTUbt-E3UGBzc'
- //            				 };
+.config(function($stateProvider, $urlRouterProvider) {
+
+	$urlRouterProvider.otherwise('index.html');
+
+	$stateProvider
+    .state('main', {
+      url: '/index.html',
+      templateUrl: 'views/main.html',
+      controller: 'mainController'
+    })
+    .state('zipCode', {
+      url: '/location',
+      templateUrl: 'views/zipCode.html',
+      controller: 'mainController'
+    })
+    // .state('price', {
+    //   url: '/priceRange',
+    //   templateUrl: 'views/price.html'
+    // })
+    // .state('enviro', {
+    //   url: '/environment',
+    //   templateUrl: 'views/enviro.html'
+    // })
+
 })
