@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app='foodApp'>
+<head>
+  <meta charset="utf-8">
+	<title>Feed Me!</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+	<link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href='mainstyles.css' rel='stylesheet'>
+</head>
+<body ng-controller='mainController'>
+    <div class='container'>
+      	<div class='navbar'>
+          <div class='page-header'>
+      		    <ul class="nav nav-pills pull-right">
+                  <li ><a href='#'>Home</a></li>
+                  <li ><a href='#'>About</a></li>
+                  <li ><a href='#'>Contact</a></li></li>
+              </ul>
+              <h1 class="text-muted brand">App Title</h1>
+          </div>
+        </div>
+
+      <div>
+            <!-- <form ng-click='getData(searchData, searchZip)'>
+              <input type='text' placeholder='type of food...' ng-model='searchData'>
+              <input type='text' placeholder='zip code...' ng-model='searchZip'>
+              <button type='submit' class='btn btn-primary'>Search</button>
+            </form>
+
+            <div ng-repeat='place in answerData'>
+                  {{place.name}}
+            </div> -->
+            
+            <div class="jumbotron center-block main ng-scope">
+              <div ng-view></div>
+            </div>
+
+      </div>
+
+
+
+    </div>
+
+  <div class='footer'></div>
+
+<script src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='app/app.js'></script>
+<script src='app/mainCtrl.js'></script>
+<script src='app/.gitignore/defaultHeaders.js'></script>
+<script src='app/mainService.js'></script>
+<script src='app/services/yelpService.js'></script>
+</body>
+</html>
