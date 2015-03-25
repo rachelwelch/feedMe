@@ -1,5 +1,12 @@
- <div class="jumbotron center-block main">
-    <h1 class="">What's your price range?</h1>
-    <p>$ {{maxPrice}} <input class="priceRange" type="range" min="1" max="50" placeholder="Max Price" ng-model="maxPrice"/> per person.</p>
-    <p><a class="btn btn-default btn-lg btn-primary" role="button" ui-sref="enviro" ng-click="saveAnswer('price', maxPrice)">Next</a></p>
+ <div class="jumbotron center-block sub-box">
+    <h1 class="main">How much do you want to spend?</h1>
+
+    <div class = 'row money'>
+    	<p class=''><a class="btn btn-default btn-sm btn-primary glyphicon glyphicon-usd" role="button" value="1" ui-sref="finish" ng-click='saveAnswer("price", 1)' ng-model="priceData"></a></p>
+ 
+    	<p class=''><a class="btn btn-default btn-primary glyphicon glyphicon-usd" role="button" value="2" ui-sref="finish" ng-click='saveAnswer("price", 1)' ng-model="priceData"></a></p>
+
+    	<p class=''><a class="btn btn-default btn-lg btn-primary glyphicon glyphicon-usd" role="button" value="3" ui-sref="finish" ng-click='saveAnswer("price", 1)' ng-model="priceData"></a></p>
+    </div>
+
   </div>

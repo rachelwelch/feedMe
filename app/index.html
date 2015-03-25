@@ -6,7 +6,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
 	<link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link href='styles/mainstyles.css' rel='stylesheet'>
 </head>
 <body ng-controller='mainController'>
@@ -18,7 +18,7 @@
                   <li ><a href='#'>About</a></li>
                   <li ><a href='#'>Contact</a></li></li>
               </ul>
-              <h1 class="text-muted brand">App Title</h1>
+              <h1 class="text-muted brand">Feed Me!</h1>
           </div>
         </div>
 
@@ -33,7 +33,7 @@
                   {{place.name}}
             </div> -->
             
-            <div class="jumbotron center-block main ng-scope">
+            <div class="jumbotron center-block main-box ng-scope">
               <div ui-view></div>
             </div>
 
@@ -51,5 +51,6 @@
 <script src='scripts/app.js'></script>
 <script src='scripts/controllers/mainCtrl.js'></script>
 <script src='scripts/services/mainService.js'></script>
+<script src='scripts/services/answerService.js'></script>
 </body>
 </html>

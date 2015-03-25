@@ -1,0 +1,26 @@
+<div class="jumbotron center-block sub-box">
+    <h1 class="main">Matching Restaurants:</h1>
+  </div>
+
+  <h3 class="main text-muted">Order By:</h3>
+  <select ng-model="sortorder" class="form-control center-block">
+    <option value="default" selected>--</option>
+    <option value="name">Restaurant Name</option>
+    <option value="distance">Price</option>
+    <option value="+price">Distance</option>
+  </select>
+
+  <table class="table table-hover table-responsive text-muted">
+    <thead>
+      <th>Restaurant Name</th>
+      <th>Address</th>
+    </thead>
+
+    <tbody>
+      <tr ng-repeat='data in answerData | orderBy: sortorder'>
+        <td value="{{data.name}}">{{data.name}}</td>
+        <td value='{{data.address}}'>{{data.address}}</td>
+      </tr>
+    </tbody>
+
+  </table>

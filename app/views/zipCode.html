@@ -1,11 +1,8 @@
- <div class="jumbotron center-block main">
-    <h1 class="">What city are you planning to eat in?</h1>
-
-    <input type='text' placeholder='city or zip code...' ng-model='searchTerm'><br/><br/>
-    <p><a class="btn btn-default btn-lg btn-primary" role="button" ng-click="getData()">Submit</a></p>
-
-    <!-- <div ng-repeat='place in answerData'>
-                  {{place.name}}
-            </div> -->
+ <div class="jumbotron center-block sub-box">
+ 
+    <h1 class="main">Pick a place</h1>
+    <p class='text-muted sub'>Where will you be when the 'hangries' creep up?</p>
+    <input type='text' placeholder='city or zip code...' ng-model='zipData' class='zipBox'><br/><br/>
+    <p><a class="btn btn-default btn-lg btn-primary" role="button" ui-sref='price' ng-click='saveAnswer("zip", zipData)'>Submit</a></p>
 
   </div>

@@ -15,13 +15,17 @@ var app = angular.module('foodApp', ['ui.router'])
       templateUrl: 'views/zipCode.html',
       controller: 'mainController'
     })
-    // .state('price', {
-    //   url: '/priceRange',
-    //   templateUrl: 'views/price.html'
-    // })
-    // .state('enviro', {
-    //   url: '/environment',
-    //   templateUrl: 'views/enviro.html'
-    // })
+    .state('price', {
+      url: '/price',
+      templateUrl: 'views/price.html'
+    })
+    .state('finish', {
+      url: '/finishLine',
+      templateUrl: 'views/finish.html'
+    })
+    .state('results', {
+      url: '/results',
+      templateUrl: 'views/results.html'
+    })
 
 })
