@@ -1,4 +1,39 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
 html, body {
 	height: 100%;
 	width: 100%;
+	background-color: #8DB269;
+	font-family: 'Oswald', sans-serif;
+}
+
+.main-box {
+	background-color: #FAF6EB;
+	width: 100%;
+}
+
+.sub-box {
+	background-color: #FAF6EB;
+	text-align: center;
+	line-height: 45px;
+}
+
+h1.main {
+	color: #dd5f32;
+	font-size: 3.5em;
+}
+
+.zipBox {
+	width: 45%;
+}
+
+.money {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	padding: 5px;
+}
+
+.money p {
+	margin: 5px;
 }
