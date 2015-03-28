@@ -31,5 +31,9 @@ var app = angular.module('foodApp', ['ui.router'])
       url: '/results',
       templateUrl: 'views/results.html'
     })
+    .state('about', {
+      url: '/about',
+      templateUrl: 'views/about.html'
+    })
 
 })

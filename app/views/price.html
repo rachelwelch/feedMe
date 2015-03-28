@@ -1,12 +1,15 @@
  <div class="jumbotron center-block sub-box">
     <h1 class="main">How much do you want to spend?</h1>
 
-    <div class = 'row money'>
-    	<p class=''><a class="btn btn-default btn-sm btn-primary glyphicon glyphicon-usd" role="button" value="1" ui-sref="cuisine" ng-click='saveAnswer("price", 1)' ng-model="priceData"></a></p>
+    <div class = 'money'>
+    	<p class=''><a class="btn btn-default btn-sm btn-primary" role="button" value="1" ui-sref="cuisine" ng-click='saveAnswer("price", 1, 2)' ng-model="priceData">A little</a></p>
  
-    	<p class=''><a class="btn btn-default btn-primary glyphicon glyphicon-usd" role="button" value="2" ui-sref="cuisine" ng-click='saveAnswer("price", 2)' ng-model="priceData"></a></p>
+    	<p class=''><a class="btn btn-default btn-primary" role="button" value="2" ui-sref="cuisine" ng-click='saveAnswer("price", 3, 4)' ng-model="priceData">A lot</a></p>
 
-    	<p class=''><a class="btn btn-default btn-lg btn-primary glyphicon glyphicon-usd" role="button" value="3" ui-sref="cuisine" ng-click='saveAnswer("price", 3)' ng-model="priceData"></a></p>
+    	<p class=''><a class="btn btn-default btn-lg btn-primary" role="button" value="3" ui-sref="cuisine" ng-click='saveAnswer("price", 5)' ng-model="priceData">A WHOLE lot</a></p>
+
     </div>
+
+    <p class='total'><a class="btn btn-default btn-primary" role="button" value="3" ui-sref="cuisine" ng-model="priceData">It doesn't matter - I'm too hungry to care!</a></p>
 
   </div>

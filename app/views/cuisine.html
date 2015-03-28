@@ -3,9 +3,9 @@
     <p class='text-muted sub'>There are a lot of kinds of food out there.<br /> Think it through and ponder the options. Which one sounds the most appetizing?</p>
 
 
-	<select ng-model='foodData' ng-options='food as food for food in cuisineOptions'>
+	<select ng-model='foodData' ng-options='food as food for food in cuisineOptions' class='form-control'>
 		<option value="">-- choose food type --</option>
-	</select>
+	</select><br/><br/>
 
 	<p><a class="btn btn-default btn-lg btn-primary" role="button" ui-sref='finish' ng-click='saveAnswer("cuisine", foodData)'>Submit</a></p>
 
