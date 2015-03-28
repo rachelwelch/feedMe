@@ -77,3 +77,24 @@ h3.main {
 	width: 46%;
 	margin: 0 auto;
 }
+
+.logo {
+	width: 200px;
+	height: 100px;
+}
+
+.navList {
+	margin-top: 50px;
+}
+
+.btn {
+	background-color: #8DB269;
+}
+
+.btn:hover {
+	background-color: #337ab7;
+}
+
+.page-header ul li a:hover {
+	background-color: #FAF6EB;
+}

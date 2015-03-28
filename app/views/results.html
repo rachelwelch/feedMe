@@ -13,6 +13,7 @@
       <th>Restaurant Name</th>
       <th>Address</th>
       <th>Website</th>
+      <th>Rating<br/>(out of 5)</th>
     </thead>
 
     <tbody>
@@ -20,6 +21,7 @@
         <td value="{{data.name}}">{{data.name}}</td>
         <td value='{{data.address}}'>{{data.address}}, {{data.locality}}</td>
         <td value='{{data.website}}'><a ng-href='{{data.website}}' target="_blank">{{data.website}}</a></td>
+        <td value="{{data.rating}}">{{data.rating}}</td>
       </tr>
     </tbody>
 
