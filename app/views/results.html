@@ -1,25 +1,31 @@
 <div class="jumbotron center-block sub-box">
-    <h1 class="main">Matching Restaurants:</h1>
+    <h1 class="main">Now go EAT - and Enjoy!</h1>
+    <h3 class="main text-muted">Matching restaurants are listed below in order of highest rated to lowest.</h3>
+
+    <div class='sub-text-box'>
+    <h4 class='sub-text text-muted'>**If you don't see any results here, try broadening your search by entering a city name instead of a zip code, or try a different price range.</h4>
   </div>
 
-  <h3 class="main text-muted">Order By:</h3>
-  <select ng-model="sortorder" class="form-control center-block">
-    <option value="default" selected>--</option>
+</div>
+
+  <!-- <select ng-model="sortorder" class="form-control center-block">
+    <option value="default" selected></option>
     <option value="name">Restaurant Name</option>
-    <option value="distance">Price</option>
-    <option value="+price">Distance</option>
-  </select>
+    <option value="rating">Ratings/Reviews</option>
+  </select> -->
 
   <table class="table table-hover table-responsive text-muted">
     <thead>
       <th>Restaurant Name</th>
       <th>Address</th>
+      <th>Website</th>
     </thead>
 
     <tbody>
-      <tr ng-repeat='data in answerData | orderBy: sortorder'>
+      <tr ng-repeat='data in answerDataFinal | orderBy:"-rating":reverse'>
         <td value="{{data.name}}">{{data.name}}</td>
-        <td value='{{data.address}}'>{{data.address}}</td>
+        <td value='{{data.address}}'>{{data.address}}, {{data.locality}}</td>
+        <td value='{{data.website}}'><a ng-href='{{data.website}}' target="_blank">{{data.website}}</a></td>
       </tr>
     </tbody>
 

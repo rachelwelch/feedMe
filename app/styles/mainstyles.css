@@ -15,12 +15,13 @@ html, body {
 .sub-box {
 	background-color: #FAF6EB;
 	text-align: center;
-	line-height: 45px;
+	margin-bottom: 0px
 }
 
 h1.main {
 	color: #dd5f32;
 	font-size: 3.5em;
+	line-height: 70px;
 }
 
 .zipBox {
@@ -36,4 +37,18 @@ h1.main {
 
 .money p {
 	margin: 5px;
+}
+
+h3.main {
+	text-align: center;
+}
+
+.sub-text-box {
+	margin: 30px 25%;
+	width: 50%;
+	text-align: center;
+}
+
+.sub-text {
+	font-size: 1em;
 }

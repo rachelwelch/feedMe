@@ -19,6 +19,10 @@ var app = angular.module('foodApp', ['ui.router'])
       url: '/price',
       templateUrl: 'views/price.html'
     })
+    .state('cuisine', {
+      url: '/cuisine',
+      templateUrl: 'views/cuisine.html'
+    }) 
     .state('finish', {
       url: '/finishLine',
       templateUrl: 'views/finish.html'

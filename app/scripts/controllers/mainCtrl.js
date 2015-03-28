@@ -1,21 +1,6 @@
 angular.module('foodApp')
 
 .controller('mainController', function($scope, mainService, answerService) {
-	$scope.test = "It's working!";
-
-	// $scope.getData = function() {
-	// 	mainService.getData($scope.searchTerm).then(function(data) {
-	// 		return $scope.answerData = data.data.response.data;
-	// 	}).then(function(data) {
-	// 		console.log($scope.answerData);
-	// 	})
-	// }
-
-	// $scope.getData = function() {
- //    	mainService.getData($scope.zipData).then(function(data) {
- //    		console.log(data);
- //    	})
- //  }
 
  	$scope.saveAnswer = function(data, value) {
  		if (data === 'zip') {
@@ -26,25 +11,35 @@ angular.module('foodApp')
  			answerService.answers.push({
  				price: value
  			})
+ 		} else if (data === 'cuisine') {
+ 			answerService.answers.push({
+ 				cuisine: value
+ 			})
  		}
  		console.log(answerService.answers)
  	}
 
+ 	$scope.reset = function() {
+ 		answerService.answers = []
+ 	}
+
  	$scope.checkForMatch = function() {
  		var answers = answerService.answers,
- 		postcode, price;
+ 		postcode, price, cuisine;
  		for(var i = 0; i < answers.length; i++) {
  			if(answers[i].postcode) {
  				postcode = answers[i].postcode;
  			} else if (answers[i].price) {
  				price = answers[i].price;
+ 			} else if (answers[i].cuisine) {
+ 				cuisine = answers[i].cuisine;
  			}
  		}
- 		console.log(postcode)
- 		mainService.checkData(postcode, price).then(function(data) {
+
+ 		mainService.checkData(postcode).then(function(data) {
  			$scope.answerData = [];
+ 			$scope.answerDataFinal = [];
  			$scope.matchingData = (data.data.response.data);
- 			console.log($scope.matchingData)
 
  			for (var j = 0; j < $scope.matchingData.length; j++) {
  				if(!$scope.matchingData[j].price) {
@@ -53,23 +48,18 @@ angular.module('foodApp')
  					$scope.answerData.push($scope.matchingData[j])
  				}
  			}
- 			// $scope.postcodeData = data.postcode;
- 			// console.log($scope.postcodeData)
+
+ 			for (var k = 0; k < $scope.answerData.length; k++) {
+ 				for (var b = 0; b < $scope.answerData[k].cuisine.length; b++) {
+ 					if ($scope.answerData[k].cuisine[b] === cuisine) {
+ 						$scope.answerDataFinal.push($scope.answerData[k])
+ 					}
+ 				}
+ 			}
  		})
-		// console.log(mainService.checkData(answerService.answers))
  	}
 
- 	// $scope.checkForMatch = function() {
- 	// 	var answers = answerService.answers,
- 	// 	postcode, price;
- 	// 	for(var i = 0; i < answers.length; i++) {
- 	// 		answers[i].postcode = postcode;
- 	// 		answers[i].price = price;
- 	// 	}
- 	// 	mainService.getData().then(function(data) {
- 	// 		console.log(data);
- 	// 	})
- 	// }
+ 	$scope.cuisineOptions = ['American', 'Chinese', 'Italian', 'Mexican', 'European', 'Thai', 'Indian', 'Seafood', 'Japanese'];
 
 
 

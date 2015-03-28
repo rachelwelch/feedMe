@@ -15,7 +15,7 @@ angular.module('foodApp')
 	// 	return $http.get('http://api.v3.factual.com/t/restaurants-us?filters={"$and":[{"postcode":{"$eq":"' + zip + '"},"price":{"$eq":1}}]}&KEY=s2qyrTtJznORR2vImCXzzwycax5EPnvDgzRqTzex');
 	// }
 
-	this.checkData = function(postcode, price) {
+	this.checkData = function(postcode) {
 		return $http.get('http://api.v3.factual.com/t/restaurants-us?filters={"$or":[{"locality":{"$eq":"' + postcode + '"}},{"postcode":{"$eq":"' + postcode + '"}}]}&KEY=s2qyrTtJznORR2vImCXzzwycax5EPnvDgzRqTzex');
 		// var priceData = $http.get('http://api.v3.factual.com/t/restaurants-us?filters={"$or":[{"price":{"$eq":"' + price + '"}},{"price":{"$blank":true}}]}&KEY=s2qyrTtJznORR2vImCXzzwycax5EPnvDgzRqTzex');
 		// return {
