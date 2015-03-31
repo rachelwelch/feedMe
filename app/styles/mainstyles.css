@@ -1,5 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 
+
+/* Main styles for page */
+
 html, body {
 	height: 100%;
 	width: 100%;
@@ -13,9 +16,22 @@ html, body {
 	height: 100%;
 }
 
+/* Nav styles */
+
 .brand a {
 	text-decoration: none;
 }
+
+.logo {
+	width: 200px;
+	height: 100px;
+}
+
+.navList {
+	margin-top: 50px;
+}
+
+/* Body styles */
 
 .sub-box {
 	background-color: #FAF6EB;
@@ -23,6 +39,21 @@ html, body {
 	margin-bottom: 0px;
 	height: 100%;
 }
+
+.about-pic {
+	margin: 0 auto;
+}
+
+.about {
+	clear: both;
+	margin-top: 30px;
+}
+
+.strong-text {
+	font-size: 1.5em;
+}
+
+/* Styles for views */
 
 h1.main {
 	color: #dd5f32;
@@ -60,32 +91,13 @@ h3.main {
 	font-size: 1em;
 }
 
-.about-pic {
-	margin: 0 auto;
-}
-
-.about {
-	clear: both;
-	margin-top: 30px;
-}
-
-.strong-text {
-	font-size: 1.5em;
-}
-
 .form-control {
 	width: 46%;
 	margin: 0 auto;
 }
 
-.logo {
-	width: 200px;
-	height: 100px;
-}
+/* Button Styles */
 
-.navList {
-	margin-top: 50px;
-}
 
 .btn {
 	background-color: #8DB269;
